@@ -1,9 +1,9 @@
 '''
-This module performs 
-* Spelling correction task given amharic text 
-* 
+This module performs
+* Spelling correction task given amharic text
+*
 
-Output Example 
+Output Example
 
 =====================
 ነው 260338
@@ -29,17 +29,15 @@ def lookup(phrase, distance=2):
     '''
     Accepts an Amharic exerpt of a text to correct its spelling
     @param distance - Distance of editing a word [Merges, splits, deletions, insertions]
-        Default - 2 
+        Default - 2
     '''
-    suggestions = spellcheck.lookup_compound(phrase, 2) 
+    suggestions = spellcheck.lookup_compound(phrase, 2)
 
     return suggestions
 
-def calculate_disance(word, another):
+def calculate_distance(word, another):
     '''
     Calculates the # of additions, deletion, insertions needed to match a `word` with `another`
     '''
     edit_distance = EditDistance(word, 'damerau')
     return edit_distance.compare(another, len(word))
-
-    

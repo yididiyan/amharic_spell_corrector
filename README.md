@@ -28,12 +28,12 @@ The function calculates the number of edit [ insertion, update, delete ] needed 
 
 ```python
 from spell_corrector import calculate_disance
-calculate_disance('እክብሮትና', 'አክብሮትና')
->> 2
+calculate_distance('አክብሮትና', 'አክብሮት')
+>> 1
 ```
 
 #### Crawling More Words
-The `crawler.py` script crawls around 1 million frequently used Amharic words on the Web.
+The `crawler.py` script crawls around **1 million** frequently used Amharic words on the Web.
 ```bash
 python crawler.py
 ```
