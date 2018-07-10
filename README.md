@@ -27,7 +27,7 @@ suggestions[0].term
 The function calculates the number of edit [ insertion, update, delete ] needed to correct a word to another
 
 ```python
-from spell_corrector import calculate_disance
+from spell_corrector import calculate_distance
 calculate_distance('አክብሮትና', 'አክብሮት')
 >> 1
 ```
